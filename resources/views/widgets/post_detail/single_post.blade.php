@@ -9,7 +9,7 @@
             <a href="{{ url('/'.$post->user->username) }}" class="name">{{ $post->user->name }}</a>
             <a href="{{ url('/'.$post->user->username) }}" class="username">{{ '@'.$post->user->username }}</a>
             <a href="{{ url('/post/'.$post->id) }}" class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $post->created_at->diffForHumans() }}</a>
-            @if ($post->title != '.')
+            @if ($post->title != '.')..
                 <h6>
                   <a href="{{ url('/community/'.$post->title) }}" class="username fa fa-users">{{ $post->title }}</a>  
                 </h6>
