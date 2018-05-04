@@ -1,5 +1,5 @@
 <div class="panel panel-default suggested-people">
-    <div class="panel-heading">Suggested People</div>
+    <div class="panel-heading">Возможные друзья</div>
     <ul class="list-group">
         @foreach(Auth::user()->suggestedPeople(10) as $user)
             <li class="list-group-item">

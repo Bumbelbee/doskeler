@@ -10,13 +10,13 @@
             <div class="col-md-9">
 
                 <div class="content-page-title">
-                    Relative Requests ({{ $list->count() }})
+                    Запросы на отношение ({{ $list->count() }})
                 </div>
 
 
                 @if($list->count() == 0)
                     <div class="alert-message alert-message-danger">
-                        <h4>Relative requests are not found.</h4>
+                        <h4>Запросов на отношение нету.</h4>
                     </div>
                 @else
                     <div class="row">
@@ -42,13 +42,13 @@
                                                             {{ '@'.$relation->relative->username }}
                                                         </p>
                                                     </a>
-                                                    <p style="padding: 10px; text-align: center">Is {{ $relation->relative->name }} your {{ $relation->getType() }}?</p>
+                                                    <p style="padding: 10px; text-align: center">Is {{ $relation->relative->name }} ваш {{ $relation->getType() }}?</p>
                                                 </div>
                                                 <div class="bottom" id="approve-buttons-{{ $relation->id }}">
-                                                    <div class="text-success approved" style="display: none"><i class="fa fa-check"></i> Successfully Approved</div>
-                                                    <div class="text-danger denied" style="display: none"><i class="fa fa-times"></i> Denied</div>
-                                                    <a href="javascript:;" class="btn btn-success approve-button btn-sm" onclick="relativeRequest(1, {{ $relation->id }})"><i class="fa fa-check"></i> Approve</a>
-                                                    <a href="javascript:;" class="btn btn-danger approve-button btn-sm" onclick="relativeRequest(2, {{ $relation->id }})"><i class="fa fa-times"></i> Deny</a>
+                                                    <div class="text-success approved" style="display: none"><i class="fa fa-check"></i>Запрос принят!</div>
+                                                    <div class="text-danger denied" style="display: none"><i class="fa fa-times"></i> Запрос отменен!</div>
+                                                    <a href="javascript:;" class="btn btn-success approve-button btn-sm" onclick="relativeRequest(1, {{ $relation->id }})"><i class="fa fa-check"></i> Принять</a>
+                                                    <a href="javascript:;" class="btn btn-danger approve-button btn-sm" onclick="relativeRequest(2, {{ $relation->id }})"><i class="fa fa-times"></i> Отменить</a>
                                                 </div>
                                             </div>
                                         </div>

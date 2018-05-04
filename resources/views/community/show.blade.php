@@ -25,17 +25,17 @@
                     <div class="col-xs-12 col-md-3 pull-right">
                         <div class="hidden-sm hidden-xs">
                            <div class="panel panel-default">
-                                <div class="panel-heading">Creator</div>
+                                <div class="panel-heading">Создатель:</div>
                                 <li class="list-group-item"><a href='/{{$comm->creator}}'>{{$comm->creator}}</a></li>
                             </div>
 
                             <div class="panel panel-default">  
-                                <div class="panel-heading">Created at</div>
+                                <div class="panel-heading">Создано:</div>
                                     <li class="list-group-item">{{$comm->created_at}}</li>
                                 </div>
                                 <div class="panel panel-default"> 
 
-                                <div class="panel-heading">{{$comm->followers}} people following us
+                                <div class="panel-heading">{{$comm->followers}} Подписчиков
                                   {{-- follow condition   --}}
                                         @if ($user->name != $comm->creator)
                                             <form action="/communfollow" method="get">

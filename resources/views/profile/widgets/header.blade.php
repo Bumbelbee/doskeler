@@ -15,7 +15,7 @@
                             </div>
                             <form id="form-upload-profile-photo" enctype="multipart/form-data">
                                 <div class="change-image">
-                                    <a href="javascript:;" class="upload-button" onclick="uploadProfilePhoto()"><i class="fa fa-upload"></i> Upload Photo</a>
+                                    <a href="javascript:;" class="upload-button" onclick="uploadProfilePhoto()"><i class="fa fa-upload"></i> Загрузить изображение</a>
                                     <input type="file" accept="image/*" name="profile-photo" class="profile_photo_input">
                                 </div>
                             </form>
@@ -32,7 +32,7 @@
                             <i class="fa fa-dot-circle-o" style = 'color:lime;'></i> online
                           @else
                             <div class="fa fa-dot-circle-o" style = 'color:red;'></div> offline
-                            <div class="">last seen {{$user->last_sing_in_at}}</div>
+                            <div class="">Был в сети {{$user->last_sing_in_at}}</div>
                           @endif
 
 
@@ -43,14 +43,14 @@
                     @if($my_profile)
                         <form id="form-upload-cover" enctype="multipart/form-data">
                             <div class="profile-upload-cover">
-                                <a href="javascript:;" class="btn btn-info upload-button" onclick="uploadCover()"><i class="fa fa-upload"></i> Change Cover</a>
+                                <a href="javascript:;" class="btn btn-info upload-button" onclick="uploadCover()"><i class="fa fa-upload"></i> Поменять Стену</a>
                                 <input type="file" accept="image/*" name="cover" class="cover_input">
                             </div>
                         </form>
                     @else
                         <div class="profile-follow">
                           <div class="profile-follow-b1 pull-left" style="margin-right: 10px ">
-                            <a class="btn btn-primary" href="/direct-messages/show/{{$user->id}}">Write a message</a>
+                            <a class="btn btn-primary" href="/direct-messages/show/{{$user->id}}">Написать сообщение</a>
                           </div>
                             <div class="profile-follow-b1 pull-left" style="margin-right: 10px">
                                 {!! sHelper::followButton($user->id, Auth::id(), '.profile-follow-b1') !!}

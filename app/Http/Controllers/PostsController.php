@@ -302,7 +302,7 @@ class PostsController extends Controller
                             $response['code'] = 200;
                         }else{
                             $response['code'] = 400;
-                            $response['message'] = "Something went wrong!";
+                            $response['message'] = "Произошла ошибка!";
                             $post->delete();
                         }
                     }else{
@@ -311,7 +311,7 @@ class PostsController extends Controller
                 }
             }else{
                 $response['code'] = 400;
-                $response['message'] = "Something went wrong!";
+                $response['message'] = "Произошла ошибка!";
             }
 
 

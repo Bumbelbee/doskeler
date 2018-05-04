@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                Kel doske suilowobuz! Ozunun tagdyryn tap!
+                Находи друзей с помощью doskeler!
             </div>
         </div>
     </div>
@@ -42,10 +42,10 @@
 
             <div class="tab_container">
                 <input id="tab1" type="radio" name="tabs" {{ old('tab') != 'register' ? 'checked' : '' }} class="radio_hidden">
-                <label for="tab1" class="head"><i class="fa fa-user"></i><span>LOGIN</span></label>
+                <label for="tab1" class="head"><i class="fa fa-user"></i><span>ВХОД</span></label>
 
                 <input id="tab2" type="radio" name="tabs" {{ old('tab') == 'register' ? 'checked' : '' }} class="radio_hidden">
-                <label for="tab2" class="head"><i class="fa fa-user-plus"></i><span>SIGN UP</span></label>
+                <label for="tab2" class="head"><i class="fa fa-user-plus"></i><span>Регистрация</span></label>
 
                 <div class="contents">
                     <section id="content1" class="tab-content">

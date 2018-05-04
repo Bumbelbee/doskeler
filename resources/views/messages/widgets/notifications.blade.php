@@ -11,7 +11,7 @@
 </a>
 <ul class="dropdown-menu" role="menu">
     @if(count($user_list) == 0)
-       <li style="padding: 10px"><a href="{{ url('/direct-messages') }}">See all messages</a></li>
+       <li style="padding: 10px"><a href="{{ url('/direct-messages') }}">Просмотреть сообщения</a></li>
     @else
         @foreach($user_list as $friend)
             <li>

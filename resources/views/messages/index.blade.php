@@ -11,7 +11,7 @@
 
 
                 <div class="content-page-title">    
-                    <i class="fa fa-commenting"></i> Chat of Messages
+                    <i class="fa fa-commenting"></i> Чат сообщений
                          @include('flash')
                 </div>
 
@@ -20,7 +20,7 @@
 
                 <div class="new-message-button">
                     <button class="btn btn-success btn-sm" type="button" data-toggle="modal" data-target="#userListModal">
-                        <i class="fa fa-commenting"></i> Add People
+                        <i class="fa fa-commenting"></i> Добавить контакт
                     </button>
                 </div>
                 <div class="dm">
@@ -47,12 +47,12 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h5 class="modal-title">New Message</h5>
+                                <h5 class="modal-title">Новое сообщение</h5>
                             </div>
 
                             <div class="user_list">
                                 @if($user_list->count() == 0)
-                                    <div class="alert alert-danger" role="alert" style="margin: 10px;">There is no people!</div>
+                                    <div class="alert alert-danger" role="alert" style="margin: 10px;">Нету людей в списке!</div>
                                 @else
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="modal-search"  onkeyup="searchUserList()" placeholder="Search for names..">

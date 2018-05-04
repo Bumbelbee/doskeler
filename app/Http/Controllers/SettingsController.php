@@ -96,9 +96,9 @@ class SettingsController extends Controller
             }
         }
         if ($save){
-            $request->session()->flash('alert-success', 'Your settings have been successfully updated!');
+            $request->session()->flash('alert-success', 'Ваши данные были успешно обновлены!');
         }else{
-            $request->session()->flash('alert-danger', ($additional_msg)?$additional_msg:'There was a problem saving your settings!');
+            $request->session()->flash('alert-danger', ($additional_msg)?$additional_msg:'Проблемы в записи ваших данных');
         }
 
         if ($request->input("type") == "password") {

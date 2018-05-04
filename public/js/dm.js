@@ -140,12 +140,12 @@ function showChat(id){
                 $(".dm .chat .message-list").animate({ scrollTop: $('.dm .chat .message-list').prop("scrollHeight")}, 0);
             }else{
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка');
         }
     });
 }
@@ -179,12 +179,12 @@ function sendMessage(e){
                         $(".dm .chat .message-list").animate({ scrollTop: $('.dm .chat .message-list').prop("scrollHeight")}, 1000);
                     } else {
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Произошла ошибка');
                     }
                 },
                 error: function () {
                     $('#errorMessageModal').modal('show');
-                    $('#errorMessageModal #errors').html('Something went wrong!');
+                    $('#errorMessageModal #errors').html('Произошла ошибка');
                 }
             });
         }
@@ -195,10 +195,10 @@ function sendMessage(e){
 function deleteChat(id){
 
     BootstrapDialog.show({
-        title: 'Chat Delete!',
-        message: 'Are you sure to delete chat ?',
+        title: 'Удалить Чат!',
+        message: 'Уверены что хотите удалить чат ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Да,Уверен!",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -222,18 +222,18 @@ function deleteChat(id){
                             $('#chat-people-list-'+id).remove();
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Произошла ошибка');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Произошла ошибка');
                     }
                 });
             }
         }, {
-            label: 'No!',
+            label: 'Нет!',
             action: function(dialog) {
                 dialog.close();
             }
@@ -244,10 +244,10 @@ function deleteChat(id){
 function deleteMessage(id){
 
     BootstrapDialog.show({
-        title: 'Message Delete!',
-        message: 'Are you sure to delete message ?',
+        title: 'Удалить Сообщение!',
+        message: 'Вы уверены что хотите удалить?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Да,Уверен!",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -270,18 +270,18 @@ function deleteMessage(id){
                             $('.dm .chat #chat-message-'+id).remove();
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Произошла ошибка');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Произошла ошибка');
                     }
                 });
             }
         }, {
-            label: 'No!',
+            label: 'Нет!',
             action: function(dialog) {
                 dialog.close();
             }

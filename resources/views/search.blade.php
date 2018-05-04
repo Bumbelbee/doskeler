@@ -22,7 +22,7 @@
 
 
                             <div class="alert-message alert-message-default">
-                                <h4>Not Found !</h4>
+                                <h4>Нету совпадений !</h4>
                             </div>
 
 
@@ -46,15 +46,15 @@
                         @if($communities->count() == 0)
 
                             <div class="alert-message alert-message-default col-md-10">
-                                <h4>Not Found !</h4>
+                                <h4>Нету совпадений !</h4>
                             </div>
                         @else
                                                         <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr class="bg-primary">
-                                    <th scope="col" class = 'text-center'>Title</th>
-                                    <th scope="col" class = 'text-center'>Description</th>
-                                    <th scope="col" class = 'text-center'>Follow</th>
+                                    <th scope="col" class = 'text-center'>Название</th>
+                                    <th scope="col" class = 'text-center'>Описание</th>
+                                    <th scope="col" class = 'text-center'>Подписка</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -64,7 +64,7 @@
                                     <td>{{ $community->description }}</td>
                                     <td class="col-sm-1">
                                                                             <form action="/commfollow" method="get">
-                                                                            <button class="btn btn-primary">follow</button>
+                                                                            <button class="btn btn-primary">подписаться</button>
                                                                             <input type="hidden" name="title" value="{{$community->title}}">
                                                                             <input type="hidden" name="commId" value="{{$community->id}}">
                                                                             <input type="hidden" name="userId" value="{{$user->id}}">

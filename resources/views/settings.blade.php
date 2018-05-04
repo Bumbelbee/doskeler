@@ -17,7 +17,7 @@
 
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-primary">
-                    <div class="panel-heading">Account Settings</div>
+                    <div class="panel-heading">Настройки Профиля</div>
 
                     <div class="panel-body">
 
@@ -28,7 +28,7 @@
                             <input type="hidden" name="type" value="account" />
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Name</label>
+                                <label for="name" class="col-md-4 control-label">Имя</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control" name="name" value="{{ $user['name'] }}" required>
@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                <label for="email" class="col-md-4 control-label">E-Mail Адрес</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control" name="email" value="{{ $user['email'] }}" required>
@@ -72,7 +72,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Update
+                                        Обновить
                                     </button>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                             <input type="hidden" name="type" value="username" />
 
                             <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Username</label>
+                                <label for="name" class="col-md-4 control-label">Фамилия</label>
 
                                 <div class="col-md-6">
                                     <input id="username" type="text" class="form-control" name="username" value="{{ $user['username'] }}" required>
@@ -114,7 +114,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Update
+                                        Обновить
                                     </button>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
 
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-primary">
-                    <div class="panel-heading">Password Settings</div>
+                    <div class="panel-heading">Настройки Пароля</div>
 
                     <div class="panel-body">
 
@@ -139,7 +139,7 @@
                             <input type="hidden" name="type" value="password" />
 
                             <div class="form-group{{ $errors->has('current_password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Current Password</label>
+                                <label for="password" class="col-md-4 control-label">Текущий Пароль</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control" name="current_password">
@@ -153,7 +153,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">New Password</label>
+                                <label for="password" class="col-md-4 control-label">Новый Пароль</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control" name="password">
@@ -167,7 +167,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password-confirm" class="col-md-4 control-label">Confirm New Password</label>
+                                <label for="password-confirm" class="col-md-4 control-label">Подтверждение нового пароля </label>
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
@@ -177,7 +177,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Update
+                                        Обновить
                                     </button>
                                 </div>
                             </div>

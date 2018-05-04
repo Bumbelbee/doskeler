@@ -49,12 +49,12 @@ function findMyLocation(){
                         });
                     }else{
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Произошла ошибка');
                     }
                 },
                 error: function(){
                     $('#errorMessageModal').modal('show');
-                    $('#errorMessageModal #errors').html('Something went wrong!');
+                    $('#errorMessageModal #errors').html('Произошла ошибка');
                 }
             });
 
@@ -97,7 +97,7 @@ function saveInformation(){
         },
         error: function(){
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка');
             $('.loading-page').hide();
         }
     });
@@ -147,7 +147,7 @@ function uploadProfilePhoto(){
             },
             error: function(){
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка');
                 $(div_name+ ' .loading-image').hide();
             }
         });
@@ -194,7 +194,7 @@ function uploadCover(){
             },
             error: function(){
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка');
                 $(div_name+ ' .loading-cover').hide();
             }
         });

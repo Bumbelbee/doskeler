@@ -1,5 +1,5 @@
 @if(count($user_list) == 0)
-   <div class="alert">No People!</div>
+   <div class="alert">Нету людей!</div>
 @else
     @php($i = 0)
     @foreach($user_list as $friend)

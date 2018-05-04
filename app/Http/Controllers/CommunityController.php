@@ -117,7 +117,7 @@ class CommunityController extends Controller
         DB::table('community_user')->insert(['user_id'=>$userId,'community_id'=>$commId]);
         DB::table('communities')->where('title',$title)->increment('followers');
         
-        Session::flash('success',"now you follow this community");  
+        Session::flash('success',"Теперь вы подписаны на это сообщество");  
         return redirect()->route('community.show',$title);
     }
 
@@ -128,7 +128,7 @@ class CommunityController extends Controller
 
         DB::table('communities')->where('title',$title)->decrement('followers');
         DB::table('community_user')->where(['user_id'=>$user_id,'community_id'=>$comm_id]);
-        Session::flash('success',"now you unfollow ~$title~");  
+        Session::flash('success',"Вы отписались от сообщества ~$title~");  
         return redirect()->route('community.index');
     }
 

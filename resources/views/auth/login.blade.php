@@ -2,13 +2,13 @@
     <input type="hidden" value="login" name="tab" />
     {{ csrf_field() }}
 
-    <h2>Connect with doskeler to people!</h2>
+    <h2>Присоединяйся к обществу с помощью doskeler!</h2>
 
 
 
     <div class="row">
         <div class="form-group{{ old('tab') != 'register' && $errors->has('email') ? ' has-error' : '' }} col-md-12">
-            <label for="email" class="control-label">E-Mail Address</label>
+            <label for="email" class="control-label">E-Mail Адрес</label>
 
 
 
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group{{ old('tab') != 'register' && $errors->has('password') ? ' has-error' : '' }} col-md-12">
-            <label for="password" class="control-label">Password</label>
+            <label for="password" class="control-label">Пароль</label>
 
             <div  class="input-group">
                 <span class="input-group-addon" id="basic-addon1"><i class="fa fa-unlock-alt"></i> </span>
@@ -45,7 +45,7 @@
             <div class="checkbox checkbox-primary">
                 <input id="checkbox2" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label for="checkbox2">
-                    Remember Me
+                    Запомнить меня
                 </label>
             </div>
         </div>
@@ -53,13 +53,13 @@
         <div class="form-group">
             <div class="col-md-8 col-md-offset-2">
                 <button type="submit" class="btn btn-primary btn-login">
-                    Log In
+                    Войти
                 </button>
 
                 <div class="clearfix"></div>
 
                 <a class="btn  btn-primary center" href="{{ route('password.request') }}" style="margin-top:15px;margin-left:75px;">
-                    Forgot Your Password?
+                    Забыли свой пароль?
                 </a>
             </div>
         </div>

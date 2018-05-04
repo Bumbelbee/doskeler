@@ -9,7 +9,7 @@ $(function() {
 
     $(".select2-multiple").select2();
     $(".js-example-placeholder-single").select2({
-        placeholder: "Select a state",
+        placeholder: "Выбрать состояние",
         allowClear: true
     });
 
@@ -32,13 +32,13 @@ function getLocation() {
         return navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
         $('#errorMessageModal').modal('show');
-        $('#errorMessageModal #errors').html("Geolocation is not supported by this browser.");
+        $('#errorMessageModal #errors').html("Геолокация не поддерживается этим браузером.");
     }
 }
 
 function showPosition(position) {
     var location = {latitude: position.coords.latitude, longitude: position.coords.longitude};
-    location_finder = "found";
+    location_finder = "найдено";
     found_location = location;
 }
 
@@ -46,36 +46,36 @@ function showError(error) {
     var error_msg = null;
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            error_msg = "You denied the request for Geolocation.";
+            error_msg = "Вы отменили запрос на геолокацию.";
             break;
         case error.POSITION_UNAVAILABLE:
-            error_msg = "Location information is unavailable.";
+            error_msg = "Некорректные данные о геолокации.";
             break;
         case error.TIMEOUT:
-            error_msg = "The request to get user location timed out.";
+            error_msg = "Время ожидания превышен.";
             break;
         case error.UNKNOWN_ERROR:
-            error_msg = "An unknown error occurred.";
+            error_msg = "Ошибка.";
             break;
     }
     $('#errorMessageModal').modal('show');
     $('#errorMessageModal #errors').html(error_msg);
-    location_finder = "not-found";
+    location_finder = "не найдено";
 }
 
 
 var found_location2 = "";
-var location_finder2 = "not-running";
+var location_finder2 = "не запушено";
 function getLocation2() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition2);
     } else {
-        location_finder2 = "not-found";
+        location_finder2 = "не найдено";
     }
 }
 function showPosition2(position) {
     found_location2 = {latitude: position.coords.latitude, longitude: position.coords.longitude};
-    location_finder2 = "found";
+    location_finder2 = "найдено";
 }
 
 function autoFindLocation(){
@@ -157,12 +157,12 @@ function follow(following, follower, element, size){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка!');
         }
     });
 
@@ -193,12 +193,12 @@ function followRequest(type, id){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка');
         }
     });
 
@@ -227,12 +227,12 @@ function deniedFollow(me, follower, element, size){
                 location.reload();
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка!');
         }
     });
 
@@ -264,12 +264,12 @@ function relativeRequest(type, id){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка!');
         }
     });
 
@@ -278,10 +278,10 @@ function relativeRequest(type, id){
 function removeRelation(type, id){
 
     BootstrapDialog.show({
-        title: 'Relationship Delete!',
-        message: 'Are you sure to delete ?',
+        title: 'Удаление Отношений!',
+        message: 'Вы уверены что хотите удалить?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Да,уверен",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -305,18 +305,18 @@ function removeRelation(type, id){
                             location.reload();
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Произошла ошибка!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Произошла ошибка!');
                     }
                 });
             }
         }, {
-            label: 'No!',
+            label: 'НЕТ!',
             action: function(dialog) {
                 dialog.close();
             }

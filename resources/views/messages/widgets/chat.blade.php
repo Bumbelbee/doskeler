@@ -28,7 +28,7 @@
     @php($first_message_id = 0)
     @if($message_list->count() == 0)
         <div class="alert alert-info">
-            No messages
+            Нету сообщений
         </div>
     @else
         @php($i=0)
@@ -53,12 +53,12 @@
         <input type="hidden" name="user_phone" value="{{ $friend->phone}}">
         <input type="hidden" name="user_name" value="{{ $user->name}}">
         <input type="hidden" name="receiver_name" value="{{ $friend->name}}">
-        <button class="btn btn-primary pull-right" style= "margin-top: -10px;">Send sms</button>
+        <button class="btn btn-primary pull-right" style= "margin-top: -10px;">СМС(на телефон)</button>
        
         @if ($can_send_message)
             <textarea class="form-control" name ='body' rows="1" placeholder="Write a message" onkeyup="sendMessage(event)" value ="{{ Session::get('success') }}"></textarea>
         @else
-            <div class="alert alert-danter">You can't send message to this user.</div>
+            <div class="alert alert-danter">Вы не можете отправить сообщение этому пользователю.</div>
         @endif
     </form>
 </div>

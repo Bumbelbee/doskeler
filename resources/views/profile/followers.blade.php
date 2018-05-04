@@ -19,13 +19,13 @@
                     <div class="col-md-9">
 
                         <div class="content-page-title">
-                            Followers ({{ $list->count() }})
+                            Подписчики ({{ $list->count() }})
                         </div>
 
 
                         @if($list->count() == 0)
                             <div class="alert-message alert-message-danger">
-                                <h4>Followers are not found.</h4>
+                                <h4>Список подписчиков пуст.</h4>
                             </div>
                         @else
                             <div class="row">
@@ -82,7 +82,7 @@
             <div class="container">
                 <div class="alert-message alert-message-default">
                     <h4>{{ '@'.$user->username."'s" }} profile is private.</h4>
-                    <p>Please follow to see {{ '@'.$user->username."'s" }} profile.</p>
+                    <p>Подпищитесь чтоб увидеть{{ '@'.$user->username."'s" }} профиль.</p>
                 </div>
             </div>
         @endif

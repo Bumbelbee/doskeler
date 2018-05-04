@@ -100,7 +100,7 @@ function newPost(){
         },
         error: function(){
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка!');
             $(form_name + ' .loading-post').hide();
         }
     });
@@ -182,10 +182,10 @@ function fetchForOlderPosts(){
 function deletePost(id){
 
     BootstrapDialog.show({
-        title: 'Post Delete!',
-        message: 'Are you sure to delete post ?',
+        title: 'Удалить Пост!',
+        message: 'Вы уверены что хотите удалить пост ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Да,Уверен!",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -205,21 +205,21 @@ function deletePost(id){
                     success: function(response){
                         dialog.close();
                         if (response.code == 200){
-                            $('#panel-post-'+id).html("Post deleted!");
+                            $('#panel-post-'+id).html("Пост Удален!");
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Произошла ошибка!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Произошла ошибка!');
                     }
                 });
             }
         }, {
-            label: 'No!',
+            label: 'Нет!',
             action: function(dialog) {
                 dialog.close();
             }
@@ -258,12 +258,12 @@ function likePost(id){
                 }
             }else{
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка!');
             }
         },
         error: function(){
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка!');
         }
     });
 }
@@ -295,12 +295,12 @@ function submitComment(id){
                     $('#panel-post-'+id+' .post-comments').append(response.comment);
                 } else {
                     $('#errorMessageModal').modal('show');
-                    $('#errorMessageModal #errors').html('Something went wrong!');
+                    $('#errorMessageModal #errors').html('Произошла ошибка!');
                 }
             },
             error: function () {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка!');
             }
         });
     }
@@ -310,10 +310,10 @@ function submitComment(id){
 function removeComment(id, post_id){
 
     BootstrapDialog.show({
-        title: 'Comment Delete!',
-        message: 'Are you sure to delete comment ?',
+        title: 'Удалить Комментарий!',
+        message: 'Вы уверены что хотите удалить комментарий ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Да,Уверен!",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -337,18 +337,18 @@ function removeComment(id, post_id){
                             $('#panel-post-'+post_id+' .comments-title').html(response.comments_title);
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Произошла ошибка!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Произошла ошибка!');
                     }
                 });
             }
         }, {
-            label: 'No!',
+            label: 'Нет!',
             action: function(dialog) {
                 dialog.close();
             }
@@ -378,12 +378,12 @@ function showLikes(id){
                 $('#likeListModal').modal('show');
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Произошла ошибка!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Произошла ошибка!');
         }
     });
 }

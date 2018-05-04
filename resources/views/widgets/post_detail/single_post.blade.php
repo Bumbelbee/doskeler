@@ -36,7 +36,7 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dd1" style="float: right;">
-                            <li><a href="javascript:;" onclick="deletePost({{ $post->id }})"><i class="fa fa-fw fa-trash" aria-hidden="true"></i> Delete</a></li>
+                            <li><a href="javascript:;" onclick="deletePost({{ $post->id }})"><i class="fa fa-fw fa-trash" aria-hidden="true"></i> Удалить</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                     <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
                 </div>
                 <button type="button" class="btn btn-default btn-xs pull-right" onclick="submitComment({{ $post->id }})">
-                    Submit!
+                    Про комментировать!
                 </button>
             </form>
         </div>

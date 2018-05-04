@@ -10,16 +10,16 @@
             <div class="col-md-9">
                 @include('flash')
                 <div class="content-page-title">
-                    <i class="fa fa-users"></i> Communities 
+                    <i class="fa fa-users"></i> Сообщества 
                         <div class="green">
                             <a href="javascript:;" data-toggle="modal" data-target="#group">
-                            <i class="fa fa-pencil"></i>Create Community</a>
+                            <i class="fa fa-pencil"></i>Создать Сообщество</a>
                         </div>
                 </div>
 {{-- my community list --}}
         
     <div class="list-group col-md-5 text-center">
-    <p class="list-group-item list-group-item-action active ">My communities list</p>
+    <p class="list-group-item list-group-item-action active ">Список моих сообществ</p>
   @foreach ($communities as $community )
   <a href="/community/{{ $community->title }}" class="list-group-item list-group-item-action">{{ $community->title }}</a>
     @endforeach
@@ -64,7 +64,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h3 class="modal-title">Create community</h3>
+                    <h3 class="modal-title">Создать сообщество</h3>
                 </div>
                 <form id="form-profile-hobbies" method="post" action="">
 
@@ -72,12 +72,12 @@
 
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Title:</label>
-                            <input type="text" class = 'form-control' placeholder="community title" name = 'title'>
+                        <label>Название:</label>
+                            <input type="text" class = 'form-control' name = 'title'>
                     </div>
                     <div class="form-group">
-                        <label>Description:</label>
-                            <input type="text" name = 'desc' class = 'form-control' placeholder="community description">
+                        <label>Описание:</label>
+                            <input type="text" name = 'desc' class = 'form-control'>
                             <input type="hidden" name = 'creator' value="{{$user->name}}">
                         @foreach($lastId as $id)
                             <input type = 'hidden' name = 'lastId' value = '{{ $id->id +1 }}'
@@ -86,8 +86,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Save</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Сохранить</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
                 </div>
             </form>
 

@@ -294,7 +294,7 @@ class MessagesController extends Controller
                 'text' => $body
                 ]);
             
-            \Session::flash('success',"sms was successfully send to @$receiver");
+            \Session::flash('success',"Смс было успешно отправлено пользователю: @$receiver");
             return redirect('/direct-messages');
             }
 
