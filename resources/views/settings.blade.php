@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('private') ? ' has-error' : '' }}">
-                                <label for="private" class="col-md-4 control-label">Private Account</label>
+                                <label for="private" class="col-md-4 control-label">Приватность</label>
 
                                 <div class="col-md-6">
                                     <input id="private" type="checkbox" name="private" value="1" @if($user['private'] == 1){{ 'checked' }}@endif>
@@ -86,7 +86,7 @@
 
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-primary">
-                    <div class="panel-heading">Username Settings</div>
+                    <div class="panel-heading">Настройки @Фамилия</div>
 
                     <div class="panel-body">
 

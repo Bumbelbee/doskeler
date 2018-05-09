@@ -3,7 +3,7 @@
         <li class="list-group-item">
             <a href="{{ url('/') }}" class="menu-home">
                 <i class="fa fa-home"></i>
-                Home
+                Домашняя страница
             </a>
         </li>
         <li class="list-group-item">
@@ -18,12 +18,12 @@
                 Сообщества
             </a>
         </li>
-        <li class="list-group-item">
+        {{-- <li class="list-group-item">
             <a href="{{ url('/groups') }}" class="menu-groups">
                 <i class="fa fa-users"></i>
                 Группы
             </a>
-        </li>
+        </li> --}}
         <li class="list-group-item">
             <a href="{{ url('/direct-messages') }}" class="menu-dm">
                 <i class="fa fa-commenting"></i>

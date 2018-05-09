@@ -31,7 +31,7 @@
 
                             <div class="panel panel-default">  
                                 <div class="panel-heading">Создано:</div>
-                                    <li class="list-group-item">{{$comm->created_at}}</li>
+                                    <li class="list-group-item">{{date("H:i/d-m-y ",strtotime($comm->created_at))}}</li>
                                 </div>
                                 <div class="panel panel-default"> 
 

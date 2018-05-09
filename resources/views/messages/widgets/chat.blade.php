@@ -18,7 +18,7 @@
                 {{-- end of --}}
         </div>  
     </a>
-    <a class="btn btn-default btn-xs btn-remove" onclick="deleteChat({{ $friend->id }})" data-toggle="tooltip" data-placement="bottom" title="Delete Chat">
+    <a class="btn btn-default btn-xs btn-remove" onclick="deleteChat({{ $friend->id }})" data-toggle="tooltip" data-placement="bottom" title="Удалить Чат">
         <i class="fa fa-times"></i>
     </a>
     <div class="clearfix"></div>

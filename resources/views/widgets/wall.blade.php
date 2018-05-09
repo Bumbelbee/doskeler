@@ -6,7 +6,7 @@
             <input type="hidden" name="group_id" value="{{ $wall['new_post_group_id']}}">
             <input type="hidden" name="title" value="{{ $title ?? 
                 '.'}}">
-            <textarea name="content" placeholder="Share what you think or photos"></textarea>
+            <textarea name="content" placeholder="Поделись новостями...."></textarea>
             <div class="image-area">
                 <a href="javascript:;" class="image-remove-button" onclick="removePostImage()"><i class="fa fa-times-circle"></i></a>
                 <img src="" />

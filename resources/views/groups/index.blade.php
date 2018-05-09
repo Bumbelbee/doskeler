@@ -11,7 +11,7 @@
 
 
                 <div class="content-page-title">
-                    <i class="fa fa-users"></i> Groups
+                    <i class="fa fa-users"></i> группы
                 </div>
 
 
@@ -19,10 +19,10 @@
                 @if($groups->count() == 0)
 
                     <div class="alert-message alert-message-default">
-                        <h4>You are not in any group.</h4>
+                        <h4>Вы не одной группе</h4>
                     </div>
 
-                @else
+                @else 
 
                     <div class="row">
 

@@ -8,8 +8,8 @@
         <div class="pull-left info">
             <a href="{{ url('/'.$post->user->username) }}" class="name">{{ $post->user->name }}</a>
             <a href="{{ url('/'.$post->user->username) }}" class="username">{{ '@'.$post->user->username }}</a>
-            <a href="{{ url('/post/'.$post->id) }}" class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $post->created_at->diffForHumans() }}</a>
-            @if ($post->title != '.')..
+            <a href="{{ url('/post/'.$post->id) }}" class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ date("H:i/d-m-y ",strtotime($post->created_at)) }}</a>
+            @if ($post->title != '.')
                 <h6>
                   <a href="{{ url('/community/'.$post->title) }}" class="username fa fa-users">{{ $post->title }}</a>  
                 </h6>
@@ -78,7 +78,7 @@
                     <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
                 </div>
                 <button type="button" class="btn btn-default btn-xs pull-right" onclick="submitComment({{ $post->id }})">
-                    Про комментировать!
+                   Комментировать...
                 </button>
             </form>
         </div>

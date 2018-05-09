@@ -22,7 +22,7 @@
                     <div class="detail">
                         <strong>{{ $friend['user']->name }}</strong>
                         <span>{{ str_limit($friend['message']->message, 20) }}</span>
-                        <small>{{ $friend['message']->created_at->diffForHumans() }}</small>
+                        <small>{{ $friend['message']->created_at->format('d/m/y | H:i') }}</small>
                     </div>
                     <div class="clearfix"></div>
                 </a>

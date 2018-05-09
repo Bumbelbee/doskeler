@@ -47,15 +47,15 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h5 class="modal-title">Новое сообщение</h5>
+                                <h5 class="modal-title">Добавить контакт</h5>
                             </div>
 
                             <div class="user_list">
                                 @if($user_list->count() == 0)
-                                    <div class="alert alert-danger" role="alert" style="margin: 10px;">Нету людей в списке!</div>
+                                    <div class="alert alert-danger" role="alert" style="margin: 10px;"></div>
                                 @else
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="modal-search"  onkeyup="searchUserList()" placeholder="Search for names..">
+                                        <input type="text" class="form-control" id="modal-search"  onkeyup="searchUserList()" placeholder="Искать по имени..">
                                     </div>
                                     <table id="modal-table">
                                         @foreach($user_list->get() as $f)

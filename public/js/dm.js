@@ -218,7 +218,7 @@ function deleteChat(id){
                     success: function(response){
                         dialog.close();
                         if (response.code == 200){
-                            $('.dm .chat').html(" <p style='padding: 20px;'> Chat deleted! </p> ");
+                            $('.dm .chat').html(" <p style='padding: 20px;'> Чат Удален! </p> ");
                             $('#chat-people-list-'+id).remove();
                         }else{
                             $('#errorMessageModal').modal('show');
