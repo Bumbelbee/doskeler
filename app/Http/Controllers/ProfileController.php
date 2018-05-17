@@ -233,7 +233,7 @@ class ProfileController extends Controller
             $hobby->save();
         }
 
-        $request->session()->flash('alert-success', 'Your hobbies have been successfully updated!');
+        $request->session()->flash('alert-success', 'Ваше хобби было успешно обновлено!');
 
         return redirect('/'.Auth::user()->username);
 

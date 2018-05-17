@@ -15,7 +15,7 @@ class CreateCommunitiesTable extends Migration
     {
         Schema::create('communities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->unique();
+            $table->string('title');
             $table->string('description');
             $table->string('creator');
             $table->integer('followers')->unsigned();

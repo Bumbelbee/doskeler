@@ -1,5 +1,5 @@
 @if(count($user_list) == 0)
-   <div class="alert">Нету диалогов...</div>
+   <div class="alert">No People!</div>
 @else
     @php($i = 0)
     @foreach($user_list as $friend)
@@ -11,7 +11,7 @@
             <div class="detail">
                 <strong>{{ $friend['user']->name }}</strong>
                 <span>{{ str_limit($friend['message']->message, 20) }}</span>
-                <small>{{ $friend['message']->created_atformat('d/m/y | H:i') }}</small>
+                <small>{{ $friend['message']->created_at->format('d/m/y | H:i') }}</small>
             </div>
             @if($i == 0)
                 <input type="hidden" name="people-list-first-id" value="{{ $friend['user']->id }}" />

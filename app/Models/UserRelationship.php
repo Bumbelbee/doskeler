@@ -32,17 +32,17 @@ class UserRelationship extends Model
 
     public function getType(){
         if ($this->relation_type == 0){
-            return "Mother";
+            return "Мама";
         }else if($this->relation_type == 1){
-            return "Father";
+            return "Папа";
         }else if($this->relation_type == 2){
-            return "Spouse";
+            return "Муж/жена";
         }else if($this->relation_type == 3){
-            return "Sister";
+            return "Сестра";
         }else if($this->relation_type == 4){
-            return "Brother";
+            return "Брат";
         }else{
-            return "Relative";
+            return "Отношения";
         }
     }
 }

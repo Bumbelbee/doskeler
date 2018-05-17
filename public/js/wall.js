@@ -1,6 +1,4 @@
-/**
- * Created by lvntayn on 04/06/2017.
- */
+
 $(function() {
     if (WALL_ACTIVE) {
         $('.new-post-box textarea, .panel-post .post-write-comment textarea').each(function () {
@@ -277,7 +275,7 @@ function submitComment(id){
 
     if (comment.trim() == ''){
         $('#errorMessageModal').modal('show');
-        $('#errorMessageModal #errors').html('Please write comment!');
+        $('#errorMessageModal #errors').html('Напиши комментарий!');
     }else {
         $.ajax({
             url: BASE_URL + '/posts/comment',
@@ -333,7 +331,7 @@ function removeComment(id, post_id){
                     success: function(response){
                         dialog.close();
                         if (response.code == 200){
-                            $('#post-comment-'+id+' .panel-body').html("<p><small>Comment deleted!</small></p>");
+                            $('#post-comment-'+id+' .panel-body').html("<p><small>Комментарий удален!</small></p>");
                             $('#panel-post-'+post_id+' .comments-title').html(response.comments_title);
                         }else{
                             $('#errorMessageModal').modal('show');

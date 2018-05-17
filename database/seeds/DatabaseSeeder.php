@@ -19,8 +19,7 @@ class DatabaseSeeder extends Seeder
             'created_at' => DB::raw('CURRENT_TIMESTAMP'),
         ]);
 
-        $hobbies = ["Reading","Watching TV","Family Time","Going to Movies","Fishing","Computer","Gardening","Renting Movies","Walking","Exercise","Listening to Music","Entertaining","Hunting","Team Sports","Shopping","Traveling","Sleeping","Socializing","Sewing","Golf","Church Activities","Relaxing","Playing Music","Housework","Crafts","Watching Sports","Bicycling","Playing Cards","Hiking","Cooking","Eating Out","Dating Online","Swimming","Camping","Skiing","Working on Cars","Writing","Boating","Motorcycling","Animal Care","Bowling","Painting","Running","Dancing","Horseback Riding","Tennis","Theater","Billiards","Beach","Volunteer Work"];
-
+        $hobbies = ["Читать","Смотреть ТВ","Время с семьей","Ходить в кино","Рыбачить","Компьютер","Работать в саду","Гулять","Слушать музыку","Охотится","Заниматься спортом","Шоппиться","Путешествовать","Спать","Общаться","Отдыхать","Домашняя работа","Crafts","Смотреть спорт","Кататься на велосипеде","Играть в карты","Катать на лыжах","Готовить","Объедаться","Плавать","Ходить в походы","Ченить машину","Писать","Кататься на мотоцикле","Заботится о животных","Боулинг","Рисовать","Бегать","Плавать","Кататься на лошади","Теннис","Театр","Волонтёрская работа"];
 
 
         foreach ($hobbies as $hobby){

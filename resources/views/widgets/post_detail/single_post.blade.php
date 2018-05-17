@@ -75,9 +75,9 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
+                    <textarea class="form-control" id="comment1" rows="1" placeholder="коммент"></textarea>
                 </div>
-                <button type="button" class="btn btn-default btn-xs pull-right" onclick="submitComment({{ $post->id }})">
+                <button type="button" class="btn btn-default btn-xs pull-right" id="comment2" onclick="submitComment({{ $post->id }})">
                    Комментировать...
                 </button>
             </form>

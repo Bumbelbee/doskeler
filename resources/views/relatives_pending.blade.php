@@ -42,7 +42,7 @@
                                                             {{ '@'.$relation->relative->username }}
                                                         </p>
                                                     </a>
-                                                    <p style="padding: 10px; text-align: center">Is {{ $relation->relative->name }} ваш {{ $relation->getType() }}?</p>
+                                                    <p style="padding: 10px; text-align: center">это {{ $relation->relative->name }} ваш {{ $relation->getType() }}?</p>
                                                 </div>
                                                 <div class="bottom" id="approve-buttons-{{ $relation->id }}">
                                                     <div class="text-success approved" style="display: none"><i class="fa fa-check"></i>Запрос принят!</div>

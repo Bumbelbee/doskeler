@@ -12,7 +12,7 @@
                 <div class="content-page-title">
                     <i class="fa fa-users"></i> Сообщества 
                         <div class="green">
-                            <a href="javascript:;" data-toggle="modal" data-target="#group">
+                            <a href="javascript:;" data-toggle="modal" data-target="#group" id="create">
                             <i class="fa fa-pencil"></i>Создать Сообщество</a>
                         </div>
                 </div>
@@ -25,37 +25,6 @@
     @endforeach
     
 </div>
-
-
- {{-- end of comm list --}}
-
- {{-- <table class="table table-bordered table-hover">
-  <thead>
-    <tr class="bg-primary">
-      <th scope="col" class = 'text-center'>Title</th>
-      <th scope="col" class = 'text-center'>Description</th>
-      <th scope="col" class = 'text-center'>Follow</th>
-    </tr>
-  </thead>
-  <tbody>
-        @foreach ($all as $community )
-    <tr>
-      <td class ="col-sm-3">{{ $community->title }}</td>
-      <td>{{ $community->description }}</td>
-      <td class="col-sm-1">
-                                            <form action="/commfollow" method="get">
-                                            <button class="btn btn-primary">follow</button>
-                                            <input type="hidden" name="title" value="{{$community->title}}">
-                                            <input type="hidden" name="commId" value="{{$community->id}}">
-                                            <input type="hidden" name="userId" value="{{$user->id}}">
-                                            </form>
-    </td>
-    </tr>
-    @endforeach
-  </tbody>
-</table> --}}
-
-
 {{-- group creation modal window --}}
     <div class="modal fade" id="group" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
         <div class="modal-dialog">
@@ -73,11 +42,11 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Название:</label>
-                            <input type="text" class = 'form-control' name = 'title'>
+                            <input type="text" class = 'form-control' name = 'title' id="title">
                     </div>
                     <div class="form-group">
                         <label>Описание:</label>
-                            <input type="text" name = 'desc' class = 'form-control'>
+                            <input type="text" name = 'desc' class = 'form-control' id="desc">
                             <input type="hidden" name = 'creator' value="{{$user->name}}">
                         @foreach($lastId as $id)
                             <input type = 'hidden' name = 'lastId' value = '{{ $id->id +1 }}'
@@ -86,7 +55,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Сохранить</button>
+                    <button type="submit" class="btn btn-success" id="save">Сохранить</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
                 </div>
             </form>

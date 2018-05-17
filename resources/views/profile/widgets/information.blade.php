@@ -56,7 +56,7 @@
         @if($relationship->count() > 0)
             @foreach($relationship as $relative)
                 <li class="list-group-item">
-                    @if($user->sex == 0){{ 'His' }}@else{{ 'Her' }}@endif {{ $relative->getType() }} is <a href="{{ url('/'.$relative->relative->username) }}">{{ $relative->relative->name }}</a>
+                    @if($user->sex == 0){{ 'Его' }}@else{{ 'Ее' }}@endif {{ $relative->getType() }} <a href="{{ url('/'.$relative->relative->username) }}">{{ $relative->relative->name }}</a>
                     @if($my_profile)
                     <a href="javascript:;" onclick="removeRelation(0, {{ $relative->id }})" class="pull-right"><i class="fa fa-times"></i></a>
                     @endif
@@ -66,7 +66,7 @@
         @if($relationship2->count() > 0)
             @foreach($relationship2 as $relative)
                 <li class="list-group-item">
-                    {{ $relative->getType() }} of  <a href="{{ url('/'.$relative->main->username) }}">{{ $relative->main->name }}</a>
+                    {{ $relative->getType() }} <a href="{{ url('/'.$relative->main->username) }}">{{ $relative->main->name.'a' }}</a>
                     @if($my_profile)
                     <a href="javascript:;" onclick="removeRelation(1, {{ $relative->id }})" class="pull-right"><i class="fa fa-times"></i></a>
                     @endif
@@ -104,7 +104,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h5 class="modal-title">Your Information</h5>
+                <h5 class="modal-title">Личная Информация</h5>
             </div>
 
             <div class="modal-body">

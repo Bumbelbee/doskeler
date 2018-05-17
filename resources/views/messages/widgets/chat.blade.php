@@ -1,3 +1,4 @@
+@include('flash')
 <input type="hidden" name="chat_friend_id" value="{{ $friend->id }}">
 <div class="chat-info">
     <a href="{{ url('/'.$friend->username) }}" class="user-profile">
@@ -56,10 +57,9 @@
         <button class="btn btn-primary pull-right" style= "margin-top: -10px;">СМС(на телефон)</button>
        
         @if ($can_send_message)
-            <textarea class="form-control" name ='body' rows="1" placeholder="Write a message" onkeyup="sendMessage(event)" value ="{{ Session::get('success') }}"></textarea>
+            <textarea class="form-control area" name ='body' rows="1" placeholder="Написать сообщение" onkeyup="sendMessage(event)" value ="{{ Session::get('success') }}" id="area"></textarea>
         @else
             <div class="alert alert-danter">Вы не можете отправить сообщение этому пользователю.</div>
         @endif
     </form>
 </div>
-@include('flash')

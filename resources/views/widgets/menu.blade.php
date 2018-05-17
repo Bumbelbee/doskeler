@@ -15,7 +15,7 @@
         <li class="list-group-item">
             <a href="{{ url('/community') }}" class="menu-nearby">
                 <i class="fa fa-group"></i>
-                Сообщества
+                Группы
             </a>
         </li>
         {{-- <li class="list-group-item">

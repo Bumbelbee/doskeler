@@ -1,7 +1,7 @@
 <p class="text-muted"><i class="fa fa-comment" aria-hidden="true"></i>
     <small>
         @if($post->getCommentCount() > 0)
-            @if($post->getCommentCount() > 1){{ $post->getCommentCount().' comments' }}@else{{ $post->getCommentCount().' comment' }}@endif
+            @if($post->getCommentCount() > 1){{ $post->getCommentCount().' комментария' }}@else{{ $post->getCommentCount().' комментарий' }}@endif
         @else
             Комментариев нет.Оставь комментарий!
         @endif

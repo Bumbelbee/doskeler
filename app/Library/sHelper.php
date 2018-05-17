@@ -64,10 +64,10 @@ class sHelper
         $km = $miles * 1.609344;
 
         if ($km < 1){
-            return round($miles * 1609.344).' Meter';
+            return round($miles * 1609.344).' метр';
         }
 
-        return round($km, 2).' Km';
+        return round($km, 2).' км';
 
     }
 
@@ -82,7 +82,7 @@ class sHelper
                 $notifications[] = [
                     'url' => url('/followers/pending'),
                     'icon' => 'fa-user-plus',
-                    'text' => $followers.' follower requests'
+                    'text' => $followers.' запрос на подписку'
                 ];
             }
 
@@ -92,7 +92,7 @@ class sHelper
                 $notifications[] = [
                     'url' => url('/relatives/pending'),
                     'icon' => 'fa-user-circle-o',
-                    'text' => $relatives.' relatives requests'
+                    'text' => $relatives.' запрос на отношение'
                 ];
             }
 
@@ -104,7 +104,7 @@ class sHelper
                     $notifications[] = [
                         'url' => url('/post/'.$comment->post_id),
                         'icon' => 'fa-commenting',
-                        'text' => $name.' left a comment on your post.'
+                        'text' => $name.' оставил комментарий'
                     ];
                 }
 
@@ -117,7 +117,7 @@ class sHelper
                     $notifications[] = [
                         'url' => url('/post/'.$likne->post_id),
                         'icon' => 'fa-heart',
-                        'text' => $name.' liked your post.'
+                        'text' => $name.' поставил лайк'
                     ];
                 }
 

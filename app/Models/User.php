@@ -108,8 +108,8 @@ class User extends Authenticatable
     }
 
     public function getSex(){
-        if ($this->sex == 0) return "Male";
-        return "Female";
+        if ($this->sex == 0) return "Муж";
+        return "Жен";
     }
 
     public function getPhone(){

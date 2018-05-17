@@ -10,7 +10,7 @@
             <div class="col-md-9">
 
                 <div class="content-page-title">
-                    <i class="fa fa-map-marker"></i> Find people nearby
+                    <i class="fa fa-map-marker"></i> Найти людей поблизости
                 </div>
 
                 <div id="map-render" style="width: 100%; height: 500px">
@@ -20,12 +20,12 @@
                 <h5 class="text-muted">{{ $user->location->address }}</h5>
 
                 <div class="content-page-blue-title">
-                    Found {{ $nearby->count() }} people in 50 km range!
+                    Найдены {{ $nearby->count() }} люди в районе 50 км!
                 </div>
 
                 @if($nearby->count() == 0)
                     <div class="alert-message alert-message-danger">
-                        <h4>People are not found.</h4>
+                        <h4>Людей не найдено</h4>
                     </div>
                 @else
                     <div class="row">

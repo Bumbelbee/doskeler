@@ -15,8 +15,9 @@
                          @include('flash')
                 </div>
 
+                         @include('flash')
 
-
+                    
 
                 <div class="new-message-button">
                     <button class="btn btn-success btn-sm" type="button" data-toggle="modal" data-target="#userListModal">
